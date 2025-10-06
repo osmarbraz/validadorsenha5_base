@@ -1,7 +1,10 @@
-# Cálculo do tipo de triângulo usando JUnit5
+# Validador de senha usando JUnit5
  
-Verifica se 3 valores podem ou não formar um triângulo. 
-Se formar um triângulo indica qual o tipo do triângulo.
+Valida uma senha segundo os critérios:
+1. mínimo 8 caracteres
+2. pelo menos uma maiúscula
+3. um número e 
+4. um caractere especial.
 
 <br>
 - Utiliza o Apache Maven para a automatização da construção.<br>
