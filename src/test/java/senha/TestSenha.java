@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class TestSenha {
        
     @Test
-    void deveAceitarSenhaValida() {
+    void testDeveAceitarSenhaValida() {
         Senha senha = new Senha("Abcde@123");
         boolean retornoEsperado = true;
         boolean retornoFeito = senha.eValida();
@@ -14,7 +14,7 @@ class TestSenha {
     }
 
     @Test
-    void deveRecusarSenhaComMenosDeOitoCaracteres() {
+    void testDeveRecusarSenhaComMenosDeOitoCaracteres() {
         Senha senha = new Senha("Abc@1");
         boolean retornoEsperado = false;
         boolean retornoFeito = senha.eValida();
@@ -22,7 +22,7 @@ class TestSenha {
     }
 
     @Test
-    void deveRecusarSenhaSemMaiuscula() {
+    void testDeveRecusarSenhaSemMaiuscula() {
         Senha senha = new Senha("abcde@123");
         boolean retornoEsperado = false;
         boolean retornoFeito = senha.eValida();
@@ -30,7 +30,7 @@ class TestSenha {
     }
 
     @Test
-    void deveRecusarSenhaSemNumero() {
+    void testDeveRecusarSenhaSemNumero() {
         Senha senha = new Senha("Abcde@xyz");
         boolean retornoEsperado = false;
         boolean retornoFeito = senha.eValida();
@@ -38,7 +38,7 @@ class TestSenha {
     }
 
     @Test
-    void deveRecusarSenhaSemCaractereEspecial() {
+    void testDeveRecusarSenhaSemCaractereEspecial() {
         Senha senha = new Senha("Abcdef123");
         boolean retornoEsperado = false;
         boolean retornoFeito = senha.eValida();
@@ -46,7 +46,7 @@ class TestSenha {
     }
 
     @Test
-    void deveRecusarSenhaNula() {
+    void testDeveRecusarSenhaNula() {
         Senha senha = new Senha(null);
         boolean retornoEsperado = false;
         boolean retornoFeito = senha.eValida();
